@@ -71,13 +71,3 @@ def purchase():
     }
     purchases_models.Purchase.purchase(data)
     return redirect('/paintings')
-
-# @app.route('/view/purchases')
-# def view_purchases():
-#     if 'user_id' not in session:
-#         return redirect('/')
-#     data = {
-#         'id': session['user_id']
-#     }
-#     all_purchases= User.show_all_purchases(data)
-#     return render_template('purchases.html', user_in_db = User.get_one(data), all_purchases = all_purchases)
